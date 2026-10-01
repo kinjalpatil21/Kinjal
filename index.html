@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 35px rgba(0,0,0,.15);
+width:90%;
+max-width:420px;
+z-index:2;
+}
+
+h1{
+font-size:34px;
+color:#ff4d88;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+color:#555;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#ff2f73;
+}
+
+.note{
+position:absolute;
+font-size:20px;
+animation:float 12s linear infinite;
+opacity:.6;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+}
+
+100%{
+transform:translateY(-120vh);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="note" style="left:10%;">💌</div>
+<div class="note" style="left:25%;animation-delay:2s;">🌸</div>
+<div class="note" style="left:40%;animation-delay:5s;">❤️</div>
+<div class="note" style="left:60%;animation-delay:1s;">✨</div>
+<div class="note" style="left:75%;animation-delay:6s;">🌷</div>
+<div class="note" style="left:90%;animation-delay:3s;">💕</div>
+
+<div class="container">
+
+<h1>Hi Love ❤️</h1>
+
+<p>
+I made a tiny little surprise for you...<br><br>
+
+Nothing too fancy,<br>
+just something made with lots of love,
+a little effort,
+and many smiles. ❤️
+</p>
+
+<button onclick="nextPage()">
+Open My Surprise ✨
+</button>
+
+</div>
+
+<script>
+
+function nextPage(){
+
+alert("The journey begins here... ❤️");
+
+}
+
+</script>
+
+</body>
+</html>
