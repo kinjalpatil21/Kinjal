@@ -82,45 +82,224 @@ transform:translateY(-120vh);
 }
 
 }
+
+
+
 #page1{
 
 display:none;
-
 position:fixed;
-
-inset:0;
+top:0;
+left:0;
+width:100%;
+height:100%;
 
 justify-content:center;
-
 align-items:center;
 
-background:#0d0d0d;
+background:linear-gradient(135deg,#5b0b16,#2b0008);
 
-flex-direction:column;
+overflow:auto;
+
+padding:30px;
 
 }
 
 .page1Card{
 
-width:85%;
+width:100%;
+display:flex;
+justify-content:center;
 
-max-width:420px;
+}
 
-background:rgba(255,255,255,.05);
+.paper{
 
-backdrop-filter:blur(10px);
+width:92%;
+max-width:390px;
 
-padding:30px;
+background:#fff8ef;
 
-border-radius:25px;
+padding:25px;
 
-color:white;
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+position:relative;
+
+animation:fade .8s;
+
+}
+
+.bow{
+
+position:absolute;
+
+top:-20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:40px;
+
+}
+
+.polaroid{
+
+width:240px;
+
+margin:auto;
+
+background:white;
+
+padding:10px;
+
+border-radius:5px;
+
+transform:rotate(-3deg);
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+margin-bottom:25px;
+
+}
+
+.polaroid img{
+
+width:100%;
+display:block;
+
+}
+
+.polaroid p{
+
+margin-top:10px;
+
+font-size:13px;
 
 text-align:center;
 
-box-shadow:0 0 30px rgba(255,0,0,.15);
+color:#555;
+
+}
+
+.paper h1{
+
+text-align:center;
+
+color:#8b0000;
+
+margin-bottom:18px;
+
+}
+
+.paper .letter{
+
+font-size:16px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:#5d4037;
+
+}
+.paper{
+
+width:90%;
+max-width:390px;
+
+background:#f9f2e7;
+
+border-radius:18px;
+
+padding:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+position:relative;
 
 animation:fade .8s;
+
+}
+
+.bow{
+
+font-size:42px;
+
+position:absolute;
+
+top:-20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.polaroid{
+
+background:white;
+
+padding:10px;
+
+border-radius:6px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+transform:rotate(-3deg);
+
+margin:auto;
+
+margin-bottom:25px;
+
+width:240px;
+
+}
+
+.polaroid img{
+
+width:100%;
+
+border-radius:4px;
+
+}
+
+.polaroid p{
+
+margin-top:8px;
+
+font-size:13px;
+
+color:#444;
+
+text-align:center;
+
+}
+
+.paper h1{
+
+color:#8b0000;
+
+font-size:30px;
+
+text-align:center;
+
+margin-bottom:15px;
+
+}
+
+.paper .letter{
+
+color:#5b3a29;
+
+font-size:16px;
+
+line-height:1.9;
+
+text-align:center;
 
 }
 
@@ -268,55 +447,7 @@ alert("Page 2 - Our Story ❤️");
 </script>
 <div id="page1">
 
-<div class="page1Card">
 
-<h1>Happy Boyfriend's Day ❤️</h1>
-
-<p class="letter">
-
-To my Meuuu,
-
-<br><br>
-
-This isn't just a website.
-
-It's a tiny collection of memories,
-
-smiles,
-
-late-night video calls,
-
-our little arguments,
-
-and every little moment that slowly became my favourite part of life.
-
-<br><br>
-
-Take your time.
-
-Read everything.
-
-Smile a little.
-
-Because every page was made only for you.
-
-<br><br>
-
-Love,
-
-<br>
-
-Kinu ❤️
-
-</p>
-
-<button id="storyBtn">
-
-Our Story →
-
-</button>
-
-</div>
 
 <div id="secretHeart">❤️</div>
 
