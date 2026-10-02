@@ -233,17 +233,22 @@ Open My Surprise ✨
 </button>
 
 </div>
-
 <script>
 
 function nextPage(){
 
+alert("Button clicked!");
+
 document.querySelector(".container").style.display="none";
+
+document.querySelectorAll(".note").forEach(note=>{
+note.style.display="none";
+});
 
 document.getElementById("page1").style.display="flex";
 
 }
-}
+
 window.onload=function(){
 
 document.getElementById("secretHeart").onclick=function(){
