@@ -170,19 +170,15 @@ transform:translateY(0);
 
 <body>
 
-<div class="heart" style="left:5%;">❤️</div>
+<div class="kiss">💋</div>
+<div class="kiss" style="left:12%;top:15%;transform:rotate(-20deg);">💋</div>
+<div class="kiss" style="left:75%;top:10%;transform:rotate(25deg);">💋</div>
+<div class="kiss" style="left:20%;bottom:10%;transform:rotate(10deg);">💋</div>
+<div class="kiss" style="right:10%;bottom:15%;transform:rotate(-15deg);">💋</div>
 
-<div class="heart" style="left:18%;animation-delay:2s;">🤍</div>
-
-<div class="heart" style="left:35%;animation-delay:4s;">❤️</div>
-
-<div class="heart" style="left:50%;animation-delay:1s;">🤍</div>
-
-<div class="heart" style="left:68%;animation-delay:6s;">❤️</div>
-
-<div class="heart" style="left:82%;animation-delay:3s;">🤍</div>
-
-<div class="heart" style="left:94%;animation-delay:5s;">❤️</div>
+<div class="sparkle">✨</div>
+<div class="sparkle" style="left:20%;top:8%;">✨</div>
+<div class="sparkle" style="right:18%;bottom:20%;">✨</div>
 
 <div id="intro">
 
@@ -190,23 +186,41 @@ transform:translateY(0);
 
 <h1>Hieeeee Babyyyy ❤️</h1>
 
-<p>
+<p class="subtitle">
 
-I made something especially for you.
+Before you continue...
 
-Don't rush.
-
-Read every page slowly.
-
-I promise every click has a little piece of my heart.
+I have a tiny request 🥹
 
 </p>
 
-<button id="startBtn">
+<div class="chat">
 
-Open My Surprise ✨
+<div class="myMsg">
+
+Hieeeee Babyyyy ❤️
+
+</div>
+
+<div id="replyBox">
+
+<input
+id="reply"
+type="text"
+placeholder="Type your reply here..."
+>
+
+<button id="sendBtn">
+
+Send ❤️
 
 </button>
+
+</div>
+
+<div id="messages"></div>
+
+</div>
 
 </div>
 
@@ -214,94 +228,63 @@ Open My Surprise ✨
 
 <script>
 
-document.getElementById("startBtn").onclick = function () {
+const send=document.getElementById("sendBtn");
 
-document.getElementById("intro").innerHTML = `
+send.onclick=function(){
 
-<div class="card">
+let text=document.getElementById("reply").value.trim();
 
-<h1>💬 Hieeeee Babyyyy ❤️</h1>
+if(text==""){
 
-<p style="text-align:left;line-height:2;color:#5b3a29;">
+alert("At least say Helloooo ❤️");
 
-<b>You:</b> Hieeeee Babyyyy ❤️<br><br>
+return;
 
-<b>Him:</b> Hellooooo Kinuuu ❤️<br><br>
+}
 
-<b>You:</b> Happy Boyfriend's Dayyyyy!! 🥹❤️<br><br>
+document.getElementById("replyBox").style.display="none";
 
-<b>You:</b> I made something just for you...<br><br>
+document.getElementById("messages").innerHTML=`
 
-<span id="typing">Preparing your surprise...</span>
+<div class="hisMsg">
 
-</p>
+${text}
 
-<button id="continueBtn">
+</div>
+
+<div class="myMsg">
+
+Happy Boyfriend's Dayyyyy ❤️🥹
+
+</div>
+
+<div class="myMsg">
+
+I made something just for you...
+
+</div>
+
+<div class="myMsg">
+
+Preparing your surprise... ✨
+
+</div>
+
+<br>
+
+<button id="continue">
 
 Continue ❤️
 
 </button>
 
-</div>
-
 `;
-
-document.getElementById("continueBtn").onclick = function(){
-
-document.getElementById("intro").innerHTML = `
-
-<div class="card">
-
-<h1>✨ Loading...</h1>
-
-<p>
-
-Collecting hugs... ❤️<br><br>
-
-Picking our memories... 📸<br><br>
-
-Wrapping everything with love... 🎁<br><br>
-
-Almost ready...
-
-</p>
-
-<div style="width:100%;height:12px;background:#f3d9d9;border-radius:20px;overflow:hidden;">
-
-<div id="bar" style="height:100%;width:0%;background:#8b0000;"></div>
-
-</div>
-
-</div>
-
-`;
-
-let width = 0;
-
-let bar = document.getElementById("bar");
-
-let loading = setInterval(function(){
-
-width += 2;
-
-bar.style.width = width + "%";
-
-if(width >= 100){
-
-clearInterval(loading);
-
-alert("Next we'll open the Scrapbook Page ❤️");
-
-}
-
-},40);
-
-}
 
 }
 
 </script>
 
 </body>
+clearInterval(loadin
 
 </html>
