@@ -175,7 +175,19 @@ cursor:pointer;
 animation:heartbeat 1.6s infinite;
 
 }
+@keyframes fade{
 
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
 @keyframes heartbeat{
 
 0%,100%{
@@ -226,14 +238,14 @@ Open My Surprise ✨
 
 function nextPage(){
 
-setTimeout(()=>{
+document.querySelector(".container").style.display="none";
 
-document.getElementById("loadingPage").style.display="none";
 document.getElementById("page1").style.display="flex";
 
-},1200);
-
 }
+}
+window.onload=function(){
+
 document.getElementById("secretHeart").onclick=function(){
 
 alert("You already make every day special just by existing. ❤️");
@@ -243,6 +255,8 @@ alert("You already make every day special just by existing. ❤️");
 document.getElementById("storyBtn").onclick=function(){
 
 alert("Page 2 - Our Story ❤️");
+
+}
 
 }
 
