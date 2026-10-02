@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Boyfriend's Day ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Trebuchet MS',sans-serif;
+}
+
+body{
+
+background:#3d0715;
+overflow:hidden;
+
+}
+
+/* ---------- Floating Hearts ---------- */
+
+.heart{
+
+position:absolute;
+
+font-size:20px;
+
+opacity:.35;
+
+animation:float 14s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(120vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* ---------- Intro ---------- */
+
+#intro{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(160deg,#3d0715,#6b0f1a);
+
+}
+
+.card{
+
+width:92%;
+
+max-width:380px;
+
+background:#fffaf3;
+
+border-radius:28px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+animation:appear .8s;
+
+}
+
+.card h1{
+
+color:#8b0000;
+
+font-size:34px;
+
+margin-bottom:18px;
+
+}
+
+.card p{
+
+color:#5b3a29;
+
+font-size:17px;
+
+line-height:1.8;
+
+margin-bottom:28px;
+
+}
+
+button{
+
+padding:14px 32px;
+
+border:none;
+
+border-radius:50px;
+
+background:#8b0000;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.06);
+
+}
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="heart" style="left:5%;">❤️</div>
+
+<div class="heart" style="left:18%;animation-delay:2s;">🤍</div>
+
+<div class="heart" style="left:35%;animation-delay:4s;">❤️</div>
+
+<div class="heart" style="left:50%;animation-delay:1s;">🤍</div>
+
+<div class="heart" style="left:68%;animation-delay:6s;">❤️</div>
+
+<div class="heart" style="left:82%;animation-delay:3s;">🤍</div>
+
+<div class="heart" style="left:94%;animation-delay:5s;">❤️</div>
+
+<div id="intro">
+
+<div class="card">
+
+<h1>Hieeeee Babyyyy ❤️</h1>
+
+<p>
+
+I made something especially for you.
+
+Don't rush.
+
+Read every page slowly.
+
+I promise every click has a little piece of my heart.
+
+</p>
+
+<button id="startBtn">
+
+Open My Surprise ✨
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("startBtn").onclick = function () {
+
+document.getElementById("intro").innerHTML = `
+
+<div class="card">
+
+<h1>💬 Hieeeee Babyyyy ❤️</h1>
+
+<p style="text-align:left;line-height:2;color:#5b3a29;">
+
+<b>You:</b> Hieeeee Babyyyy ❤️<br><br>
+
+<b>Him:</b> Hellooooo Kinuuu ❤️<br><br>
+
+<b>You:</b> Happy Boyfriend's Dayyyyy!! 🥹❤️<br><br>
+
+<b>You:</b> I made something just for you...<br><br>
+
+<span id="typing">Preparing your surprise...</span>
+
+</p>
+
+<button id="continueBtn">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+`;
+
+document.getElementById("continueBtn").onclick = function(){
+
+document.getElementById("intro").innerHTML = `
+
+<div class="card">
+
+<h1>✨ Loading...</h1>
+
+<p>
+
+Collecting hugs... ❤️<br><br>
+
+Picking our memories... 📸<br><br>
+
+Wrapping everything with love... 🎁<br><br>
+
+Almost ready...
+
+</p>
+
+<div style="width:100%;height:12px;background:#f3d9d9;border-radius:20px;overflow:hidden;">
+
+<div id="bar" style="height:100%;width:0%;background:#8b0000;"></div>
+
+</div>
+
+</div>
+
+`;
+
+let width = 0;
+
+let bar = document.getElementById("bar");
+
+let loading = setInterval(function(){
+
+width += 2;
+
+bar.style.width = width + "%";
+
+if(width >= 100){
+
+clearInterval(loading);
+
+alert("Next we'll open the Scrapbook Page ❤️");
+
+}
+
+},40);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
